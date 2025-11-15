@@ -3,6 +3,8 @@ package com.pessoaEproduto.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -32,5 +34,6 @@ public class Pessoa {
 	private Integer idade;
 	
 	@OneToMany(mappedBy = "pessoa", cascade = CascadeType.ALL, orphanRemoval = true)
+	@JsonManagedReference
 	private List<Produto> produtos = new ArrayList<>();
 }
