@@ -1,4 +1,4 @@
-package com.pessoaEproduto.api;
+package com.pessoaEproduto;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
